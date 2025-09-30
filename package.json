@@ -1,0 +1,36 @@
+{
+  "name": "mongo-pinger",
+  "version": "1.0.0",
+  "description": "A simple CLI to keep MongoDB Atlas clusters alive by pinging them",
+  "main": "dist/index.js",
+  "bin": {
+    "mongo-pinger": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [
+    "mongodb",
+    "mongoose",
+    "ping",
+    "keep-alive",
+    "cronjob",
+    "cli"
+  ],
+  "author": "Ikeji Joshua",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "inquirer": "^12.9.6",
+    "mongoose": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^24.6.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

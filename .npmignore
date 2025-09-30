@@ -1,0 +1,25 @@
+# Ignore source files (only publish compiled dist)
+src/
+tsconfig.json
+tsconfig.*.json
+
+# Ignore GitHub/workflow stuff
+.github/
+.gitignore
+
+# Ignore local env + configs
+.env
+.env.local
+*.log
+
+# Ignore test files
+__tests__/
+*.test.ts
+*.spec.ts
+coverage/
+
+# Ignore editor/OS junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
