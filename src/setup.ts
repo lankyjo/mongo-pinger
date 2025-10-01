@@ -249,22 +249,13 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
       
-      - name: Install dependencies
-        run: npm install
-      
-      - name: Build CLI
-        run: npm run build
-      
-      - name: Run Mongo Pinger
-        run: npm start
+      - name: Run MongoDB Pinger
+        run: npx mongo-pinger@latest
         env:
           DATABASE_URI: \${{ secrets.DATABASE_URI }}
 `;
@@ -274,28 +265,6 @@ jobs:
     fs.writeFileSync(workflowPath, workflow);
 
     console.log("✅ Workflow created at .github/workflows/ping.yml");
-
-    // --- Install dependencies ---
-    if (fs.existsSync(path.join(process.cwd(), "package.json"))) {
-      const { install } = await prompt([
-        {
-          type: "confirm",
-          name: "install",
-          message: "Install/update dependencies now?",
-          default: true
-        }
-      ]);
-
-      if (install) {
-        console.log("\n📦 Installing dependencies...");
-        try {
-          execSync("npm install", { stdio: "inherit" });
-          console.log("✅ Dependencies installed");
-        } catch (error) {
-          console.error("⚠️  Failed to install dependencies. Run 'npm install' manually.");
-        }
-      }
-    }
 
     // --- Git integration ---
     if (isGitRepo()) {
@@ -369,7 +338,7 @@ jobs:
     console.log("   • Check the Actions tab for execution history");
     console.log("   • Enable notifications: Settings → Notifications → Actions");
     console.log("\n💡 Test locally first:");
-    console.log("   DATABASE_URI='your_uri' npm start");
+    console.log("   DATABASE_URI='your_uri' npx mongo-pinger");
     console.log("\n🔗 Useful links:");
     console.log("   • Verify cron: https://crontab.guru");
     console.log("   • MongoDB Atlas: https://cloud.mongodb.com");

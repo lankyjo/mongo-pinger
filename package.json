@@ -1,10 +1,10 @@
 {
   "name": "mongo-pinger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple CLI to keep MongoDB Atlas clusters alive by pinging them",
   "main": "dist/index.js",
   "bin": {
-    "mongo-pinger": "./dist/index.js"
+    "mongo-pinger": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",
