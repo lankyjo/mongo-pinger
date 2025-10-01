@@ -1,4 +1,4 @@
-# 🔄 mongo-pinger
+#  mongo-pinger
 
 [![npm version](https://img.shields.io/npm/v/mongo-pinger?color=blue)](https://www.npmjs.com/package/mongo-pinger)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
@@ -6,7 +6,7 @@
 
 **Keep your MongoDB Atlas free-tier clusters alive with automated scheduled pings.**
 
-MongoDB Atlas pauses inactive free-tier clusters. This CLI tool prevents that by pinging your database on a schedule via GitHub Actions—completely hands-off after a 30-second setup.
+MongoDB Atlas pauses inactive free-tier clusters. This CLI tool prevents that by pinging your database on a schedule via GitHub Actions, completely hands-off after a 30-second setup.
 
 ---
 
@@ -29,11 +29,11 @@ npx mongo-pinger setup
 ```
 
 That's it! The interactive wizard will:
-1. ✨ Ask for your preferred schedule (weekly/monthly/custom)
-2. ⏰ Let you pick the day and time
-3. 📝 Generate a GitHub Actions workflow
-4. 🔧 Optionally commit and push to git
-5. 📋 Show you exactly what to do next
+1.  Ask for your preferred schedule (weekly/monthly/custom)
+2.  Let you pick the day and time
+3.  Generate a GitHub Actions workflow
+4.  Optionally commit and push to git
+5.  Show you exactly what to do next
 
 ### What You Get
 
@@ -83,7 +83,7 @@ git push
 
 The setup wizard supports three modes:
 
-### 📅 Weekly (Recommended)
+###  Weekly (Recommended)
 Pick any day of the week. Perfect for free-tier clusters.
 
 **Example:** Every Sunday at midnight UTC
@@ -91,7 +91,7 @@ Pick any day of the week. Perfect for free-tier clusters.
 Cron: 0 0 * * 0
 ```
 
-### 📆 Monthly
+###  Monthly
 Pick a day of the month (1-31). Great for low-traffic apps.
 
 **Example:** 1st of every month at midnight UTC
@@ -111,7 +111,7 @@ Use [crontab.guru](https://crontab.guru) to build custom expressions.
 
 ---
 
-## 🧪 Testing Locally
+##  Testing Locally
 
 Test your MongoDB connection before pushing:
 
