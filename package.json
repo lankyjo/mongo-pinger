@@ -6,12 +6,12 @@
   "bin": {
     "mongo-pinger": "dist/index.js"
   },
-"scripts": {
-  "build": "tsc",
-  "start": "node dist/index.js",
-  "setup": "node dist/index.js setup",
-  "prepare": "npm run build"
-},
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "setup": "node dist/index.js setup",
+    "prepare": "npm run build"
+  },
   "keywords": [
     "mongodb",
     "mongoose",
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.9",
-    "@types/node": "^24.6.0",
+    "@types/node": "^24.10.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   }
