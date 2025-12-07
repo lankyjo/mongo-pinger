@@ -42,35 +42,6 @@ You should see: MongoDB ping successful
 
 Recommended Schedules
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 FrequencyCron ExpressionRecommended ForWeekly (default)0 0 * * SUNMost users – perfect balanceEvery 3 days0 0 */3 * *Extra safeDaily0 0 * * *Very active projectsEvery 12 hours0 */12 * * *Maximum safety
 Use crontab.guru for custom schedules.
 
@@ -90,30 +61,6 @@ Bashnpx mongo-pinger setup
 Answer "Yes" when asked to replace the existing workflow.
 
 Troubleshooting (2025 Edition)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ProblemSolutionERR_MODULE_NOT_FOUND: mongooseAlways run npm install mongo-pinger before npx mongo-pinger setupConnection timeout in GitHub ActionsAtlas → Network Access → Add IP 0.0.0.0/0 (allow access from anywhere)DATABASE_URI not configuredSecret name must be exactly DATABASE_URIWorkflow never runs on scheduleMake any commit after adding the workflow (wakes up GitHub scheduler)
 
