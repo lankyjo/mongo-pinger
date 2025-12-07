@@ -1,4 +1,4 @@
- # mongo-pinger
+# mongo-pinger
 [![npm version](https://img.shields.io/npm/v/mongo-pinger?color=blue)](https://www.npmjs.com/package/mongo-pinger)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org)
